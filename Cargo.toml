@@ -1,0 +1,17 @@
+[package]
+name = "lottie-renderer-service"
+version = "0.1.0"
+edition = "2021"
+authors = ["Marie Ramlow <me@nycode.dev>", "Michael Rittmeister <michael@rittmeister.in>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "4"
+actix-utils = "3"
+actix-cors = "0.6"
+lottieconv = "0.2.0"
+thiserror = "1"
+sha256 = "1"
+webp-animation = "0.7.0"
+gif = "0.11"

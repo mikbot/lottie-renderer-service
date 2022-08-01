@@ -1,0 +1,15 @@
+POST http://localhost:8080/convert
+Content-Type: application/json
+Accept: image/webp
+
+< ./sticker.json
+>> ./sticker.webp
+
+###
+
+POST http://localhost:8080/convert
+Content-Type: application/json
+Accept: image/gif
+
+< ./sticker.json
+>> ./sticker.gif
