@@ -6,3 +6,6 @@
 # Test Files
 *.gif
 *.webp
+
+# rlottie build
+/rlottie
