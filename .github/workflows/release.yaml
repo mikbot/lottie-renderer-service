@@ -32,6 +32,8 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
+      - name: Install dependencies
+        run: apt install -y librlottie-dev pkg-config
       - uses: actions-rs/cargo@v1
         with:
           command: publish
