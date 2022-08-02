@@ -22,6 +22,7 @@ fi
 
 cd rlottie
 git checkout v0.2
+patch -p0 < ../scripts/0001-add-missing-include.patch
 
 rm -rf build
 
