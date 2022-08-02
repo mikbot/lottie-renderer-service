@@ -1,8 +1,14 @@
-FROM rust:1.62.1-alpine as builder
+FROM rust:1.62.1-slim-bullseye as builder
 WORKDIR /usr/src/app
 COPY . .
-RUN apk add --no-cache musl-dev && cargo build --release
 
-FROM scratch
+RUN ./scripts/build_rlottie.sh
+
+RUN cargo build --release
+
+FROM debian:bullseye-slim
+
 COPY --from=builder /usr/src/app/target/release/lottie-renderer-service /
+COPY --from=builder /usr/lib/librlottie.so* /usr/lib
+
 ENTRYPOINT ["/lottie-renderer-service"]

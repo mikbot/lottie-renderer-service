@@ -6,5 +6,17 @@
   "bumpVersion": "patch",
   "ignoreDeps": [
       "mcr.microsoft.com/vscode/devcontainers/rust"
+  ],
+  "regexManagers": [
+    {
+      "description": "Update rlottie git tag",
+      "fileMatch": "^scripts\\/build_rlottie.sh$",
+      "matchStrings": [
+        "^REPO=\"(?<packageName>.*?)\"$",
+        "^git checkout (?<currentValue>.*?)$"
+      ],
+      "depNameTemplate": "rlottie",
+      "datasourceTemplate": "github-tags"
+    }
   ]
 }

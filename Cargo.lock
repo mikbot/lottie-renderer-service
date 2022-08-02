@@ -753,7 +753,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "lottie-renderer"
+name = "lottie-renderer-service"
 version = "0.1.0"
 dependencies = [
  "actix-cors",
