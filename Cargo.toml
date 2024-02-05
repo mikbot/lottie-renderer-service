@@ -1,6 +1,6 @@
 [package]
 name = "lottie-renderer-service"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Marie Ramlow <me@nycode.dev>", "Michael Rittmeister <michael@rittmeister.in>"]
 description = "Small http microservice to render lottie animation files."
@@ -15,5 +15,5 @@ actix-cors = "0.6"
 lottieconv = "0.2.0"
 thiserror = "1"
 sha256 = "1"
-webp-animation = "0.7.0"
+webp-animation = "0.9.0"
 gif = "0.11"
