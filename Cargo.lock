@@ -555,6 +555,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "gif"
+version = "0.12.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "80792593675e051cf94a4b111980da2ba60d4a83e43e0048c5693baab3977045"
+dependencies = [
+ "color_quant",
+ "weezl",
+]
+
+[[package]]
 name = "glob"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -704,9 +714,9 @@ dependencies = [
 
 [[package]]
 name = "libwebp-sys2"
-version = "0.1.4"
+version = "0.1.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "26fb914ed98d342071062d53d6d3af7681697697085c1f55ec438d77d748e308"
+checksum = "0e2ae528b6c8f543825990b24c00cfd8fe64dde126c8288f4972b18e3d558072"
 dependencies = [
  "cc",
  "cfg-if",
@@ -754,28 +764,28 @@ dependencies = [
 
 [[package]]
 name = "lottie-renderer-service"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "actix-cors",
  "actix-utils",
  "actix-web",
- "gif",
+ "gif 0.11.4",
  "lottieconv",
  "sha256",
  "thiserror",
- "webp-animation",
+ "webp-animation 0.7.0",
 ]
 
 [[package]]
 name = "lottieconv"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7f020c4e94a8736793668c08c2dc0f337850c0ae841af0ab6f54c96e384ea596"
+checksum = "e14e22db0782a8718347d851c62ffe57eca2eb1c0da5df7ef928d09a31472078"
 dependencies = [
- "gif",
+ "gif 0.12.0",
  "rgb",
  "rlottie",
- "webp-animation",
+ "webp-animation 0.9.0",
 ]
 
 [[package]]
@@ -1011,9 +1021,9 @@ checksum = "c3b221de559e4a29df3b957eec92bc0de6bc8eaf6ca9cfed43e5e1d67ff65a34"
 
 [[package]]
 name = "rlottie"
-version = "0.5.0"
+version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8bd8750273f641daf97471c5df411d0d2676db90c222254cf65d59190f44f790"
+checksum = "b7b13d542b53bc02141ff7b0ab2a6a8328969459db55a08b9ecd876cb5d07424"
 dependencies = [
  "rgb",
  "rlottie-sys",
@@ -1400,6 +1410,16 @@ name = "webp-animation"
 version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b84fb45f4f3836cbd6d6f45cb9d89cb015322c0e56a7363dcccfdcd79d76310e"
+dependencies = [
+ "libwebp-sys2",
+ "log",
+]
+
+[[package]]
+name = "webp-animation"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e3a656b424e13a9e8b35f2cb7f96ff81c9d796b7ce3b6966cd4f8fd4a15feba4"
 dependencies = [
  "libwebp-sys2",
  "log",
